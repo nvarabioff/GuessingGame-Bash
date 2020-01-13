@@ -8,3 +8,6 @@ README.md:guessinggame.sh
 	echo "\`\`\`" >> README.md
 	wc -l < guessinggame.sh | bc >> README.md
 	echo "\`\`\`" >> README.md
+
+clean:
+	rm README.md
