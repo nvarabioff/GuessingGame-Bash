@@ -1,10 +1,12 @@
+# This function continuously asks to guess how many files are in the current directory
+# until the user gets the correct answer
 function guessinggame {
 
 	echo "How many files are in the current directory?"
 
 	read guess
 
-	numfiles=$(ls -l | grep ^- | wc -l)
+	local numfiles=$(ls -l | grep ^- | wc -l)
 
 	while [[ guess -ne numfiles ]]
 	do
